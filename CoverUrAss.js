@@ -55,7 +55,7 @@ function buildTypedUrlList(divName) {
         var url = historyItems[i].url;
         var id = historyItems[i].id;
         var title = historyItems[i].title;
-        //localStorage.setItem(id, [title, url])
+        localStorage.setItem(id, [title, url])
         var processVisitsWithUrl = function(url) {
           // We need the url of the visited item to process the visit.
           // Use a closure to bind the  url into the callback's args.
@@ -71,6 +71,7 @@ function buildTypedUrlList(divName) {
       }
     });
 
+    
 console.log(localStorage)
   // Maps URLs to a count of the number of times the user typed that URL into
   // the omnibox.
